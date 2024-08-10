@@ -13,6 +13,9 @@ $smarty->assign('mail', MAIL);
 $smarty->assign('version', VERSION);
 $smarty->assign('usage', convert(memory_get_usage(true)));
 $smarty->assign('current_year', date('Y'));
+$page_title = "Página principal - " . SITENAME;
+$smarty->assign('title', $page_title);
+
 $page_generation_time = end_timer($start_time);
 $smarty->assign('generation_time', number_format($page_generation_time, 5));
 
