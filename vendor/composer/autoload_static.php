@@ -30,6 +30,10 @@ class ComposerStaticInit7b75e8ae3546009c261c7a0e0ce55e53
         ),
     );
 
+    public static $fallbackDirsPsr4 = array (
+        0 => 'D:\\wamp64\\www\\webs\\starter\\vendor',
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -39,6 +43,7 @@ class ComposerStaticInit7b75e8ae3546009c261c7a0e0ce55e53
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit7b75e8ae3546009c261c7a0e0ce55e53::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit7b75e8ae3546009c261c7a0e0ce55e53::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit7b75e8ae3546009c261c7a0e0ce55e53::$fallbackDirsPsr4;
             $loader->classMap = ComposerStaticInit7b75e8ae3546009c261c7a0e0ce55e53::$classMap;
 
         }, null, ClassLoader::class);
