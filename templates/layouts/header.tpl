@@ -28,8 +28,7 @@
             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
           </li>
         </ul>
-        <!-- Formulario oculto
-        {include file="partials/search_bar.tpl"} -->
+        {include file="partials/search_bar.tpl"}
       </div>
     </div>
   </nav>

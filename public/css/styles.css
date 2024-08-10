@@ -1,5 +1,8 @@
+
 :root {
   --body-bg: #c1ede9;
+  /* BG Card */
+  --bs-body-bg: rgba(255, 255, 255, 0.5);
 }
 
 body {
