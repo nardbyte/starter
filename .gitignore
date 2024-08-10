@@ -1,9 +1,6 @@
 # Ignorar la carpeta vendor que contiene dependencias instaladas por Composer
 /vendor/
 
-# Ignorar archivos de configuración de entornos locales
-/configs/config.php
-
 # Ignorar archivos de caché y compilados por Smarty
 /templates/cache/
 /cache/
@@ -29,11 +26,3 @@ Thumbs.db
 # Ignorar archivos de Composer
 composer.lock
 composer.phar
-
-# Ignorar todo lo que esté en la carpeta public que no sea esencial
-/public/css/styles.css
-/public/js/scripts.js
-/public/images/
-
-# Ignorar archivos de configuración y caché de WAMP
-/wamp64/
