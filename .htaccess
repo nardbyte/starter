@@ -1,0 +1,22 @@
+RewriteEngine On
+
+RewriteBase //
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+## Evitar que se liste el contenido de los directorios
+Options All -Indexes
+## Lo mismo que lo anterior
+IndexIgnore *
+
+DirectoryIndex inc/php/home.php
+
+RewriteRule ^buscar/$ inc/php/buscar.php?a=1 [L,NC,QSA]
+RewriteRule ^letra/([A-Za-z0-9_-]+).html$ inc/php/buscar.php?q=$1&a=2 [L,NC,QSA]
+RewriteRule ^categoria/([A-Za-z0-9_-]+)/$ inc/php/buscar.php?q=$1&a=3 [L,NC,QSA]
+RewriteRule ^pelicula/([0-9]+)/([A-Za-z0-9_-]+).html$ inc/php/ver.php?id=$1 [L,NC,QSA]
+RewriteRule ^page/([A-Za-z0-9_-]+).html$ inc/php/page.php?id=$1 [L,NC,QSA]
+RewriteRule ^login/$ inc/php/login.php [L,NC,QSA]
+RewriteRule ^logout/$ inc/php/login.php?a=logout [L,NC,QSA]
+RewriteRule ^admin/$ inc/php/admin.php [L,NC,QSA]

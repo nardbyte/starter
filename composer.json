@@ -1,5 +1,6 @@
 {
     "require": {
-        "smarty/smarty": "^5.3"
+        "smarty/smarty": "^5.3",
+        "twbs/bootstrap": "5.3.3"
     }
 }
