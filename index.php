@@ -6,11 +6,15 @@ $smarty = new Smarty\Smarty;
 
 $smarty->setTemplateDir(__DIR__ . '/templates/');
 $smarty->setCompileDir(__DIR__ . '/templates/cache/');
-$smarty->setConfigDir(__DIR__ . '/inc/');
+$smarty->setConfigDir(__DIR__ . '/configs/');
 $smarty->setCacheDir(__DIR__ . '/cache/');
 
-// Asignar variables
-$smarty->assign('title', 'Mi Página con Smarty y Bootstrap');
+// Asignar las constantes a variables de Smarty
+$smarty->assign('sitename', SITENAME);
+$smarty->assign('description', DESCRIPTION);
+$smarty->assign('url', URL);
+$smarty->assign('mail', MAIL);
+$smarty->assign('version', VERSION);
 
-// Cargar plantilla
-$smarty->display('layouts/index.tpl');
+// Cargar la plantilla principal
+$smarty->display('index.tpl');
