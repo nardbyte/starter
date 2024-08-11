@@ -24,29 +24,29 @@ El proyecto está organizado de la siguiente manera:
 /mi_proyecto
 │
 ├── /app
-│ ├── /controllers # Controladores que manejan la lógica de la aplicación
-│ ├── /models # Modelos que interactúan con la base de datos
-│ └── /views # Vistas específicas (si es necesario)
+│   ├── /controllers # Controladores que manejan la lógica de la aplicación
+│   ├── /models # Modelos que interactúan con la base de datos
+│   └── /views # Vistas específicas (si es necesario)
 │
 ├── /templates # Plantillas Smarty
-│ ├── /layouts # Plantillas base y layouts generales
-│ └── /partials # Componentes parciales como el header, footer, etc.
+│   ├── /layouts # Plantillas base y layouts generales
+│   └── /partials # Componentes parciales como el header, footer, etc.
 │
 ├── /configs # Configuraciones y rutas
-│ ├── config.php # Configuración general
-│ └── routes.php # Definición de rutas
+│   ├── config.php # Configuración general
+│   └── routes.php # Definición de rutas
 │
 ├── /public # Archivos públicos accesibles desde el navegador
-│ ├── /css # Archivos CSS personalizados
-│ ├── /js # Archivos JavaScript personalizados
-│ ├── /images # Imágenes del sitio
-│ └── index.php # Punto de entrada principal
+│   ├── /css # Archivos CSS personalizados
+│   ├── /js # Archivos JavaScript personalizados
+│   ├── /images # Imágenes del sitio
+│   └── index.php # Punto de entrada principal
 │
 ├── /vendor # Dependencias instaladas por Composer
 │
 ├── /inc # Inicialización de Smarty y otras utilidades
-│ ├── init_smarty.php # Inicialización de Smarty
-│ └── functions.php # Funciones auxiliares
+│   ├── init_smarty.php # Inicialización de Smarty
+│   └── functions.php # Funciones auxiliares
 │
 └── composer.json # Configuración de Composer
 
