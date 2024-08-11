@@ -21,7 +21,7 @@ Este proyecto "Starter" es un punto de partida para el desarrollo de aplicacione
 
 El proyecto está organizado de la siguiente manera:
 
-``` your tree 
+``` your tree
 /mi_proyecto
 │
 ├── /app
@@ -63,7 +63,9 @@ Sigue estos pasos para instalar y configurar el proyecto:
 
 Instalar Dependencias:
 Asegúrate de tener Composer instalado y ejecuta:
+```
 composer install
+```
 Configurar el Entorno:
 Copia el archivo de configuración config.example.php a config.php y ajusta las configuraciones según tu entorno (base de datos, URL base, etc.).
 
@@ -85,4 +87,3 @@ Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE
 
 Contribuciones
 Las contribuciones son bienvenidas. Si tienes alguna sugerencia o mejora, por favor, abre un issue o envía un pull request.
-
