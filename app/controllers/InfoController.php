@@ -1,6 +1,7 @@
 <?php
 // app/controllers/InfoController.php
 namespace App\Controllers;
+
 class InfoController extends BaseController {
     public function index() {
         // Asignar el título de la página

@@ -3,7 +3,7 @@
 {block name="content"}
 <h1>{$title|escape}</h1>
 
-<div class="card mt-4">
+<div class="card my-4">
     <div class="card-body">
         <h5 class="card-title">Estructura de Carpetas</h5>
         <p class="card-text">
@@ -24,13 +24,15 @@
         <p class="card-text">
             Las rutas de la aplicación están definidas en el archivo <strong>/inc/routes.php</strong>. Este archivo asocia rutas URL con controladores y métodos específicos. Aquí hay un ejemplo de cómo se define una ruta:
         </p>
-        <pre><code class="language-php">
-$routes = [
-    '/' => 'HomeController@index',
-    '/contact' => 'ContactController@index',
-    '/routes' => 'InfoController@routes',  // Nueva ruta para la explicación
-];
-        </code></pre>
+        <pre>
+            <code class="language-php">
+                $routes = [
+                    '/' => 'HomeController@index',
+                    '/contact' => 'ContactController@index',
+                    '/routes' => 'InfoController@index',
+                ];
+            </code>
+        </pre>
         <p class="card-text">
             En este ejemplo, la URL <strong>/routes</strong> se asocia con el método <strong>routes()</strong> del controlador <strong>InfoController</strong>. Cuando un usuario accede a <strong>http://smarty.test/routes</strong>, se ejecuta ese método, que a su vez renderiza la plantilla correspondiente.
         </p>
@@ -43,11 +45,11 @@ $routes = [
             Por ejemplo, en la plantilla <strong>routes.tpl</strong>, se extiende la plantilla base y se define un bloque de contenido específico:
         </p>
         <pre><code class="language-smarty">
-{extends file="layouts/base.tpl"}
-
-{block name="content"}
-<!-- Contenido específico de la página -->
-{/block}
+        {literal}
+        {block name="content"}
+        <!-- Contenido específico de la página -->
+        {/block}
+        {/literal}
         </code></pre>
     </div>
 </div>
