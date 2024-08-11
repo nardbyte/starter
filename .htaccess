@@ -1,7 +1,14 @@
 RewriteEngine On
 
-# Redirige todo el tráfico a public/index.php
+# Excluir ciertas rutas de la redirección
 RewriteCond %{REQUEST_URI} !^/public/
+RewriteCond %{REQUEST_URI} !^/vendor/
+RewriteCond %{REQUEST_URI} !^/assets/
+RewriteCond %{REQUEST_URI} !^/css/
+RewriteCond %{REQUEST_URI} !^/js/
+RewriteCond %{REQUEST_URI} !^/images/
+
+# Redirigir todo el tráfico restante a public/
 RewriteRule ^(.*)$ public/$1 [L]
 
 # Si el archivo o directorio solicitado existe, lo sirve directamente
