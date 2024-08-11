@@ -11,7 +11,10 @@
             <a class="nav-link" href="{$url}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="{$base_url}routes">Routes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{$base_url}contact">Contact</a>
           </li>
         </ul>
         {include file="partials/search_bar.tpl"}

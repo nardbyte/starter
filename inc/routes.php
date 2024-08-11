@@ -4,6 +4,7 @@
 $routes = [
     '/' => 'HomeController@index',
     '/contact' => 'ContactController@index',
+    '/routes' => 'InfoController@index',
 ];
 
 function route($path) {
