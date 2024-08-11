@@ -66,24 +66,32 @@ Asegúrate de tener Composer instalado y ejecuta:
 ```
 composer install
 ```
-Configurar el Entorno:
-Copia el archivo de configuración config.example.php a config.php y ajusta las configuraciones según tu entorno (base de datos, URL base, etc.).
+### Configurar el Entorno
 
-Configurar el Servidor Web:
-Configura tu servidor web (Apache/Nginx) para apuntar al directorio /public como la raíz del documento.
+Copia el archivo de configuración `config.example.php` a `config.php` y ajusta las configuraciones según tu entorno (base de datos, URL base, etc.).
 
-Verifica la Configuración:
+### Configurar el Servidor Web
+
+Configura tu servidor web (Apache/Nginx) para apuntar al directorio `/public` como la raíz del documento.
+
+### Verifica la Configuración
+
 Accede a la URL configurada para asegurarte de que todo esté funcionando correctamente.
 
-Uso
-Rutas: Las rutas de la aplicación se definen en inc/routes.php. Puedes agregar nuevas rutas y asociarlas con controladores y métodos específicos.
-Plantillas: Las plantillas se encuentran en el directorio templates/. Puedes crear nuevas plantillas y extenderlas desde layouts/base.tpl para mantener una estructura consistente.
-Controladores: Los controladores se encuentran en app/controllers/. Aquí es donde se maneja la lógica de la aplicación.
-Contacto
-Este proyecto incluye una página de contacto donde los usuarios pueden enviar mensajes. También puedes realizar solicitudes de modificaciones o mejoras directamente en nuestro repositorio de GitHub: nardbyte/starter.
+## Uso
 
-Licencia
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más detalles.
+- **Rutas**: Las rutas de la aplicación se definen en `inc/routes.php`. Puedes agregar nuevas rutas y asociarlas con controladores y métodos específicos.
+- **Plantillas**: Las plantillas se encuentran en el directorio `templates/`. Puedes crear nuevas plantillas y extenderlas desde `layouts/base.tpl` para mantener una estructura consistente.
+- **Controladores**: Los controladores se encuentran en `app/controllers/`. Aquí es donde se maneja la lógica de la aplicación.
 
-Contribuciones
+## Contacto
+
+Este proyecto incluye una página de contacto donde los usuarios pueden enviar mensajes. También puedes realizar solicitudes de modificaciones o mejoras directamente en nuestro repositorio de GitHub: [nardbyte/starter](https://github.com/nardbyte/starter).
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
+
+## Contribuciones
+
 Las contribuciones son bienvenidas. Si tienes alguna sugerencia o mejora, por favor, abre un issue o envía un pull request.
