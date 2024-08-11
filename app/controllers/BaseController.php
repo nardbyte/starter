@@ -15,6 +15,9 @@ class BaseController {
         global $smarty;
         $this->smarty = $smarty;
 
+        // Registrar el plugin
+        $this->smarty->registerPlugin('block', 'precode', 'smarty_block_precode');
+
         // Asignar variables comunes a Smarty
         $this->smarty->assign('sitename', SITENAME);
         $this->smarty->assign('description', DESCRIPTION);

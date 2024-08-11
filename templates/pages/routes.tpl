@@ -44,13 +44,13 @@
         <p class="card-text">
             Por ejemplo, en la plantilla <strong>routes.tpl</strong>, se extiende la plantilla base y se define un bloque de contenido específico:
         </p>
-        <pre><code class="language-smarty">
-        {literal}
-        {block name="content"}
-        <!-- Contenido específico de la página -->
-        {/block}
-        {/literal}
-        </code></pre>
+        {precode lang="smarty"}
+            {literal}
+                {block name="content"}
+                    <h1>Este es un título</h1>
+                {/block}
+            {/literal}
+        {/precode}
     </div>
 </div>
 {/block}

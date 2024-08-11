@@ -7,7 +7,6 @@ class InfoController extends BaseController {
         // Asignar el título de la página
         $page_title = "Explicación de las Rutas y Carpetas";
         $this->smarty->assign('title', $page_title);
-
         // Renderizar la plantilla
         $this->render('pages/routes.tpl', $page_title);
     }

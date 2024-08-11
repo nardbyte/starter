@@ -1,5 +1,8 @@
 <?php
-// Functions
+// Import plugins
+
+// precode functions
+include ('../libs/plugins/function.precode.php');
 
 // Función para redirigir a una página diferente
 function redirectTo($url) {
