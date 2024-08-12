@@ -1,10 +1,28 @@
 
 :root {
-  --body-bg: #c1ede9;
+  --body-bg: #d2d2d262;
   /* BG Card */
   --bs-body-bg: rgba(255, 255, 255, 0.5);
 }
 
 body {
   background: var(--body-bg);
+}
+
+header, footer {
+  user-select: none; /* No permitir selección de texto en header y footer */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari y Chrome */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+header img, footer img {
+  -webkit-user-drag: none; /* No permitir arrastre de imágenes en header y footer (Safari/Chrome) */
+  user-drag: none; /* Estándar */
+  pointer-events: none; /* Deshabilita interacción con imágenes, no se pueden arrastrar ni seleccionar */
+}
+.dropdown-menu.dropdown-menu-end.show {
+    background: #fff;
+    /* Si quieres mantener el borde apuntando hacia arriba en el centro del botón */
+    margin-top: 10px; /* Ajusta según el espacio que desees */
 }

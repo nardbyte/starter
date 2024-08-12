@@ -10,8 +10,20 @@
     <link href="{$base_url}public/css/prism.css" rel="stylesheet" />
 </head>
 <body class="d-flex flex-column min-vh-100">
-    {include file="partials/nav.tpl"}
-    <main role="main" class="container mt-5 mb-5">
+    {include file="partials/header.tpl"}
+    <main role="main" class="container my-3">
+        {if isset($success)}
+            <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+                {$success}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {/if}
+        {if isset($error)}
+            <div class="alert alert-danger alert-dismissible fade show m-3" role="alert">
+                {$error}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {/if}
         {block name="content"}{/block}
         {include file="partials/sidebar.tpl"}
     </main>
