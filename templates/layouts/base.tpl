@@ -25,7 +25,6 @@
             </div>
         {/if}
         {block name="content"}{/block}
-        {include file="partials/sidebar.tpl"}
     </main>
     {include file="partials/footer.tpl"}
     <script src="{$base_url}vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

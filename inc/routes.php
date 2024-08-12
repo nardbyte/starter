@@ -12,6 +12,7 @@ $routes = [
     '/settings/updatePassword' => 'SettingsController@updatePassword',  // Ruta para actualizar la contraseña
     '/contact' => 'ContactController@index',
     '/routes' => 'InfoController@index',
+    '/admin' => 'AdminController@index',
     // Agrega otras rutas aquí
 ];
 
