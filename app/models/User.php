@@ -31,7 +31,10 @@ class User {
     }
 
     public function register($data) {
-        $stmt = $this->db->prepare("INSERT INTO users (username, email, password, first_name, last_name, country, phone, role_id, avatar) VALUES (:username, :email, :password, :first_name, :last_name, :country, :phone, :role_id, :avatar)");
+        $stmt = $this->db->prepare("
+            INSERT INTO users (username, email, password, first_name, last_name, country, phone, role_id, avatar)
+            VALUES (:username, :email, :password, :first_name, :last_name, :country, :phone, :role_id, :avatar)
+        ");
 
         $passwordHash = password_hash($data['password'], PASSWORD_BCRYPT);
 
@@ -43,7 +46,7 @@ class User {
             'last_name' => $data['last_name'],
             'country' => $data['country'],
             'phone' => $data['phone'],
-            'role_id' => 3, // Por ejemplo, 3 puede ser el ID para el rol de usuario estándar
+            'role_id' => 3, // Ejemplo: 3 puede ser el ID para el rol de usuario estándar
             'avatar' => 'default_avatar.png'
         ]);
     }
@@ -53,13 +56,24 @@ class User {
     }
 
     public function updateProfile($id, $data) {
-        $stmt = $this->db->prepare("UPDATE users SET first_name = :first_name, last_name = :last_name, country = :country, phone = :phone WHERE id = :id");
+        $stmt = $this->db->prepare("
+            UPDATE users
+            SET
+                first_name = :first_name,
+                last_name = :last_name,
+                country = :country,
+                phone = :phone,
+                avatar = :avatar
+            WHERE
+                id = :id
+        ");
 
         return $stmt->execute([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'country' => $data['country'],
             'phone' => $data['phone'],
+            'avatar' => $data['avatar'],
             'id' => $id
         ]);
     }

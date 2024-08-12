@@ -26,3 +26,10 @@ header img, footer img {
     /* Si quieres mantener el borde apuntando hacia arriba en el centro del botón */
     margin-top: 10px; /* Ajusta según el espacio que desees */
 }
+
+#uploadedAvatar {
+    object-fit: cover; /* Recorta la imagen al centro para ajustarse al contenedor */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Opcional: Si deseas que la imagen sea redonda */
+}

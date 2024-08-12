@@ -23,6 +23,11 @@
 .DS_Store
 Thumbs.db
 
+# Ignorar todos los archivos en la carpeta public/images/avatar
+public/images/avatar/*
+# Exceptuar el archivo default_avatar.png
+!public/images/avatar/default_avatar.png
+
 # Ignorar archivos de Composer
 composer.lock
 composer.phar

@@ -1,48 +1,46 @@
 {extends file="layouts/base.tpl"}
 
 {block name="content"}
-<h1>Profile</h1>
+<h1>{$title|escape}</h1>
 <div class="card my-4">
     <div class="card-body">
-        <!-- Mostrar la foto del usuario o la predeterminada si no hay avatar -->
-        <div class="text-center mb-4">
-            <img src="{$base_url}public/images/avatars/{$user.avatar|default:'default_avatar.png'|escape}" alt="Profile Picture" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
-        </div>
-        <form method="post" action="{$base_url}profile/update" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="mb-3">
+        <form id="formAccountSettings" method="POST" enctype="multipart/form-data" action="{$base_url}profile/update">
+            <div class="card-body">
+                <div class="d-flex align-items-start align-items-sm-center gap-4">
+                    <img src="{$base_url}public/images/avatars/{$user.avatar|default:'default_avatar.png'}" alt="user-avatar" class="d-block w-px-100 h-px-100 rounded" id="uploadedAvatar" />
+                    <div class="button-wrapper">
+                        <label for="avatar" class="btn btn-primary me-2 mb-3">
+                            <span>Upload new photo</span>
+                            <input type="file" id="avatar" class="account-file-input" name="avatar" hidden accept="image/png, image/jpeg, image/gif" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-0" />
+            <div class="card-body">
+                <div class="row">
+                    <div class="mb-3 col-md-6">
                         <label for="first_name" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="first_name" name="first_name" value="{$user.first_name|escape}" required>
+                        <input class="form-control" type="text" id="first_name" name="first_name" value="{$user.first_name|escape}" required />
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="mb-3">
+                    <div class="mb-3 col-md-6">
                         <label for="last_name" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="last_name" name="last_name" value="{$user.last_name|escape}" required>
+                        <input class="form-control" type="text" id="last_name" name="last_name" value="{$user.last_name|escape}" required />
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="mb-3">
+                    <div class="mb-3 col-md-6">
                         <label for="country" class="form-label">Country</label>
-                        <input type="text" class="form-control" id="country" name="country" value="{$user.country|escape}">
+                        <input class="form-control" type="text" id="country" name="country" value="{$user.country|escape}" />
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="mb-3">
+                    <div class="mb-3 col-md-6">
                         <label for="phone" class="form-label">Phone</label>
-                        <input type="text" class="form-control" id="phone" name="phone" value="{$user.phone|escape}">
+                        <input class="form-control" type="text" id="phone" name="phone" value="{$user.phone|escape}" />
                     </div>
                 </div>
+                <div class="mt-2">
+                    <button type="submit" class="btn btn-primary me-2">Save changes</button>
+                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="avatar" class="form-label">Profile Picture</label>
-                <input type="file" class="form-control" id="avatar" name="avatar">
-                <small class="form-text text-muted">Leave empty if you don't want to change your profile picture.</small>
-            </div>
-            <button type="submit" class="btn btn-primary">Update Profile</button>
         </form>
     </div>
 </div>
