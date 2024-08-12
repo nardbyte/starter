@@ -33,3 +33,9 @@ header img, footer img {
     height: 100px;
     border-radius: 50%; /* Opcional: Si deseas que la imagen sea redonda */
 }
+
+.nard {
+  font-weight: 900;
+  text-decoration: none;
+  color: #fff;
+}
