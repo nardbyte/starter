@@ -8,7 +8,7 @@ use App\Models\User;
 class BaseController {
     protected $smarty;
     protected $start_time;
-    protected $userModel; // Cambiar a protected
+    protected $userModel;
 
     public function __construct() {
         require_once '../inc/functions.php';
@@ -26,8 +26,10 @@ class BaseController {
             $this->smarty->assign('is_logged_in', true);
             $this->smarty->assign('username', $user['username']);
             $this->smarty->assign('user_avatar', $user['avatar'] ?? 'default_avatar.png');
+            $this->smarty->assign('user_role', $user['role']);
         } else {
             $this->smarty->assign('is_logged_in', false);
+            $this->smarty->assign('user_role', null);
         }
 
         if (isset($_SESSION['success'])) {
@@ -53,7 +55,6 @@ class BaseController {
         if ($page_title) {
             $this->smarty->assign('title', $page_title);
         }
-
         $page_generation_time = end_timer($this->start_time);
         $this->smarty->assign('generation_time', number_format($page_generation_time, 5));
         $this->smarty->display($template);

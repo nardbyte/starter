@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\User;
 
 class LoginController extends BaseController {
-    private $userModel;
+    protected $userModel;
 
     public function __construct() {
         parent::__construct();

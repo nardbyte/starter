@@ -5,7 +5,7 @@ namespace App\Models;
 use PDO;
 
 class User {
-    private $db;
+    protected $db;
 
     public function __construct() {
         global $conn;
@@ -25,7 +25,12 @@ class User {
     }
 
     public function findById($id) {
-        $stmt = $this->db->prepare("SELECT * FROM users WHERE id = :id LIMIT 1");
+        $stmt = $this->db->prepare("
+            SELECT users.*, roles.name as role
+            FROM users
+            JOIN roles ON users.role_id = roles.id
+            WHERE users.id = :id LIMIT 1
+        ");
         $stmt->execute(['id' => $id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
@@ -46,7 +51,7 @@ class User {
             'last_name' => $data['last_name'],
             'country' => $data['country'],
             'phone' => $data['phone'],
-            'role_id' => 3, // Ejemplo: 3 puede ser el ID para el rol de usuario estándar
+            'role_id' => 3,
             'avatar' => 'default_avatar.png'
         ]);
     }

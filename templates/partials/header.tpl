@@ -26,11 +26,17 @@
           <div class="dropdown">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="{$base_url}public/images/avatars/{$user_avatar}" alt="{$username|escape}" class="rounded-circle" width="40" height="40">
-              <span class="ms-2">{$username|escape}</span>
+              <div class="ms-2">
+                <span>{$username|escape}</span>
+                <span class="d-block text-white-50" style="font-size: 0.8em;">{$user_role|escape}</span>
+              </div>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
               <li><a class="dropdown-item" href="{$base_url}profile">Profile</a></li>
               <li><a class="dropdown-item" href="{$base_url}settings">Settings</a></li>
+             {if $user_role == 'Administrador'}
+              <li><a class="dropdown-item" href="{$base_url}admin">Admin</a></li>
+             {/if}
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="{$base_url}logout">Logout</a></li>
             </ul>
