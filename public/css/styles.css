@@ -18,9 +18,9 @@ header, footer {
 
 header img, footer img {
   -webkit-user-drag: none; /* No permitir arrastre de imágenes en header y footer (Safari/Chrome) */
-  user-drag: none; /* Estándar */
   pointer-events: none; /* Deshabilita interacción con imágenes, no se pueden arrastrar ni seleccionar */
 }
+
 .dropdown-menu.dropdown-menu-end.show {
     background: #fff;
     /* Si quieres mantener el borde apuntando hacia arriba en el centro del botón */
