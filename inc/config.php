@@ -6,7 +6,7 @@ define("DB_PASSWORD", "");
 define("DB_DATABASE", "starter");
 
 // Version
-define("VERSION", "1.0.1");
+define("VERSION", "1.0.5");
 
 // Database connection using PDO
 try {
